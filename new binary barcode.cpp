@@ -6,6 +6,7 @@ using namespace std;
 
 int main (){
 
+
 int b;
 cout << "Enter the number of bars in your barcode (between 1 and 21): ";
 cin >> b;
