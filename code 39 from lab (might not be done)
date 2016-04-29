@@ -7,39 +7,55 @@ using namespace std;
 int main (){
 int b=9;
 int z=0;
-
+int value = 0;
     char binary[b];
     int barcode[b];
     int c;
     for (c=8; c>=0; c--){
-        cout << "Enter a w for a wide bar or an n for a narrow bar: ";
+        //cout << "Enter a w for a wide bar or an n for a narrow bar: ";
         cin >> binary[c];
         //cout << endl;
         //cout << c<< " " << binary[c] << endl;
-
-
-        if (binary[c] == 'w'){
+if (binary[c] == 'w'){
             barcode[c] = c;
+
 int p = barcode[c];
 int k;
-int factor = 1;
-if (z==0){
-k=24;
+ if (z==0){
+k=4;
 }
 else if (z==1){
-k=6;
+k=3;
 }
 else if (z==2){
-k==2;
+k=2;
 }
+if (p>=k){
+
+
+
+
+
 int g = p-k;
+
+
+int factor2 = 1;
+while (k>1)
+{
+    factor2 *= k--;
+}
+
+
+
+
+int factor = 1;
 
 while (p >1)
 {
 factor *= p--;
 }
 //int f = barcode[c]-4;
-cout << " " <<  factor << endl;
+//cout << " " <<  factor << endl;
 int factor1 = 1;
 
 while (g >1)
@@ -47,18 +63,17 @@ while (g >1)
 factor1 *= g--;
 }
 
-cout << (p/(k*factor1));
-
+value += (factor/(factor2*factor1));
+}
+else value+=0;
 
         }
-        //else if (binary[c] == 'n')
-           // barcode[c] = 0;
-            //cout << binary[c] << " " << barcode[c] << endl;
+
 
 
 
 
     }
-
+cout << value << endl;
 return 0;
 }
