@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int main (){
+int b=9;
+int z=0;
+
+    char binary[b];
+    int barcode[b];
+    int c;
+    for (c=8; c>=0; c--){
+        cout << "Enter a w for a wide bar or an n for a narrow bar: ";
+        cin >> binary[c];
+        //cout << endl;
+        //cout << c<< " " << binary[c] << endl;
+
+
+        if (binary[c] == 'w'){
+            barcode[c] = c;
+int p = barcode[c];
+int k;
+int factor = 1;
+if (z==0){
+k=24;
+}
+else if (z==1){
+k=6;
+}
+else if (z==2){
+k==2;
+}
+int g = p-k;
+
+while (p >1)
+{
+factor *= p--;
+}
+//int f = barcode[c]-4;
+cout << " " <<  factor << endl;
+int factor1 = 1;
+
+while (g >1)
+{
+factor1 *= g--;
+}
+
+cout << (p/(k*factor1));
+
+
+        }
+        //else if (binary[c] == 'n')
+           // barcode[c] = 0;
+            //cout << binary[c] << " " << barcode[c] << endl;
+
+
+
+
+    }
+
+return 0;
+}
